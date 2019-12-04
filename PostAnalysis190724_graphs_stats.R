@@ -17,7 +17,7 @@ library(cowplot)
 ############## DATA ######################################################################
 rm(list = ls())
 dat0 <- data.frame(read.csv("FuncPhylo_mammals190816.csv", header=T))
-
+#  Output from main analysis
 
 
 ############## SOME SIMPLE CORRELATIONS ########################################################

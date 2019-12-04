@@ -28,9 +28,10 @@ rm(list = ls())
 
 
 #----------------------- LOAD AND CLEAN DATA -------------------------------------------------
-Threats0 <- data.frame(read.csv("Data/Raw/Threats_mammals_orig190802.csv", header=T))
+Threats0 <- data.frame(read.csv("Data/Raw/Threats_mammals.csv", header=T))
 Traits <- data.frame(read.csv("Data/Raw/Traits_mammals.csv", header=T)) # Wilman (2014) trait data (see "Articles/Measuring functional diversity" folder)
-spptree0 <- read.tree("Data/Raw/Uyeda_etal_tetrapods.tre") 
+spptree0 <- read.tree("Data/Raw/Uyeda_etal_tetrapods.tree")
+#  This tree was shared with J. Bordie privately and so has not been made publicly available here 
 
 
 # Clean some of the data
@@ -249,7 +250,7 @@ dat1$BodyMass <- as.numeric(scale(dat1$BodyMass, scale=TRUE, center=TRUE))
 #----- Save file
 dat1 <- subset(dat1, select = -c(genus))
 write.csv(dat1, "Data/Raw/mammal_threats_traits.csv", row.names=F)
-
+#  This file is then used as input in the main processing script: FD_PD_190721.R
 
 
 

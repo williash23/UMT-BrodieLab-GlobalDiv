@@ -1,6 +1,3 @@
-
-
-
 #setwd("D:/Box Sync/Projects/Projects (active)/Functional diversity/Analysis")
 setwd("C:/Users/JB/Box Sync/Projects/Projects (active)/Functional diversity/Analysis")
 #setwd("C:/Users/saraw/Documents/FD")
@@ -65,7 +62,10 @@ ctrs_df$Country <- as.character(ctrs_df$Country)
 # Run functions to prepare range polygons
 # removes mammals who are listed as extinct
 mam <- prep_range_polys(fn = "Data/Raw/TERRESTRIAL_MAMMALS.shp", ctrs = ctrs)
-
+#  This data set was obtained from the IUCN website: 
+#   https://www.iucnredlist.org/resources/spatial-data-download
+#  Downloaded on 2017-06-15
+#  Processing function found in script: FunctionalDiversity190528_funs.R
 
 
 #----------------------- SPECIES - COUNTRIES INTERSECTION ---------------------------------
@@ -165,7 +165,6 @@ start
 for(i in 1:numcountries){
 tryCatch({
 
-	#i=3
 
 	#  Exceptions to decline for country i
 	country_name <- as.character(ctrs_df[i,1])

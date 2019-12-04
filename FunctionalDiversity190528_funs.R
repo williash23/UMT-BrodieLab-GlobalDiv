@@ -18,8 +18,7 @@ prep_range_polys <- function(fn = NULL, ctrs = NULL){
 	
 
 #  Example function calls:
-#mam <- prep_range_polys(fn = "TERRESTRIAL_MAMMALS.shp", pts = global_pts)
-#spp_list <- find_int(range_polys = mam, pts = global_pts, p = i) 
+#mam <- prep_range_polys(fn = "TERRESTRIAL_MAMMALS.shp", ctrs = ctrs)
 
 
 
